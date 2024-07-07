@@ -6,12 +6,12 @@ export const routes: Routes = [
     loadComponent: () => import('./public/layout/public-layout/public-layout.component'),
     children: [
       {
-        path: 'dashboard',
+        path: 'landing',
         loadComponent: () => import('./public/components/landing/landing.component')
       },
       {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'landing',
         pathMatch: 'full'
       }
 
