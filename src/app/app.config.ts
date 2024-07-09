@@ -7,6 +7,7 @@ import { provideToastr } from 'ngx-toastr';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import localeEsCo from '@angular/common/locales/es-CO';
+import { provideHttpClient } from '@angular/common/http';
 
 registerLocaleData(localeEsCo, 'es-CO');
 
@@ -15,5 +16,6 @@ export const appConfig: ApplicationConfig = {
      provideClientHydration(),
      provideToastr(),
      provideAnimations(),
+     provideHttpClient()
      ]
 };
