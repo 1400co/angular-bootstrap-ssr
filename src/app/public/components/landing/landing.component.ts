@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-landing',
@@ -9,12 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export default class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
-  
+
   }
 
-
+  showToastr() {
+    this.toastr.success('Hello world!', 'Toastr fun!');
+  }
 
 }

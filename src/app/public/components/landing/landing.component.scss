@@ -1,0 +1,42 @@
+/* src/styles.scss */
+
+/* Default height for small devices */
+#intro-example {
+  height: 400px;
+}
+
+/* Height for devices larger than 992px */
+@media (min-width: 992px) {
+  #intro-example {
+    height: 600px;
+  }
+}
+#intro-example {
+  height: 400px;
+
+  @media (min-width: 992px) {
+    height: 600px;
+  }
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#carouselSection {
+  padding: 5rem 0;
+
+  .carousel-inner {
+    .carousel-item {
+      img {
+        max-height: 400px; // Adjust this value to your desired height
+        object-fit: cover;
+      }
+    }
+  }
+}
