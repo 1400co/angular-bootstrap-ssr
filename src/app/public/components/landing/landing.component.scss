@@ -40,3 +40,15 @@
     }
   }
 }
+
+@keyframes myAnim {
+	0% {
+		background-position: center bottom;
+		background-size: 100%;
+	}
+
+	100% {
+		background-position: center bottom;
+		background-size: 150%;
+	}
+}
