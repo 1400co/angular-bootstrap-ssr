@@ -41,14 +41,11 @@
   }
 }
 
-@keyframes myAnim {
-	0% {
-		background-position: center bottom;
-		background-size: 100%;
-	}
+.markdown-container {
+  background-color: #f0f0f0; /* Color de fondo gris para el div */
+  padding: 20px; /* Espaciado interior */
+}
 
-	100% {
-		background-position: center bottom;
-		background-size: 150%;
-	}
+.markdown-container md-editor {
+  background-color: transparent !important; /* Fondo transparente para el editor */
 }
