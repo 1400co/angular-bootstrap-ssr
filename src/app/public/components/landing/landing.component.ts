@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { ToastrService } from 'ngx-toastr';
-import { marked } from 'marked';
 
 @Component({
   selector: 'app-landing',
