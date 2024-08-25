@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
+import { PixelService } from 'ngx-multi-pixel';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -24,11 +25,16 @@ export default class LandingComponent implements OnInit {
     "showBorder": false
   };
 
-  constructor(private toastr: ToastrService) {
+  constructor(private toastr: ToastrService,
+    private pixel: PixelService
+  ) {
     this.markdownContent = ``;
 
   }
   ngOnInit(): void {
+    this.pixel.initialize();
+    this.pixel.track("PageView", {
+    });
   }
 
   showToastr() {
