@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, signal, Output, EventEmitter } from '@angular/core';
 
+/**
+ * Private header component - Header for authenticated users
+ */
 @Component({
   selector: 'app-private-header',
   standalone: true,
@@ -8,17 +11,21 @@ import { Component } from '@angular/core';
   styleUrl: './private-header.component.scss'
 })
 export class PrivateHeaderComponent {
-  isToggled = false;
+  /**
+   * Signal indicating if the sidebar is toggled
+   */
+  readonly isToggled = signal<boolean>(false);
 
-  toggleSidebar() {
-    this.isToggled = !this.isToggled;
-    const wrapper = document.getElementById('wrapper');
-    if (wrapper) {
-      if (this.isToggled) {
-        wrapper.classList.add('toggled');
-      } else {
-        wrapper.classList.remove('toggled');
-      }
-    }
+  /**
+   * Event emitter for sidebar toggle
+   */
+  @Output() sidebarToggle = new EventEmitter<void>();
+
+  /**
+   * Toggles the sidebar state
+   */
+  toggleSidebar(): void {
+    this.isToggled.update(current => !current);
+    this.sidebarToggle.emit();
   }
 }

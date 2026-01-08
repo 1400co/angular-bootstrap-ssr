@@ -135,7 +135,13 @@
   <!-- Markdown Section -->
   <section id="markdownSection" class="p-5 bg-light">
     <div class="markdown-container">
-      <md-editor name="Content" [(ngModel)]="markdownContent" [height]="'800px'" [mode]="''" [options]="toolbarOptions">
+      <md-editor 
+        name="Content" 
+        [ngModel]="markdownContent()" 
+        (ngModelChange)="markdownContent.set($event)"
+        [height]="'800px'" 
+        [mode]="''" 
+        [options]="toolbarOptions">
         <slot custom-btns></slot>
       </md-editor>
     </div>

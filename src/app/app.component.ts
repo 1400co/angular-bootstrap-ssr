@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 
+/**
+ * Root component of the application
+ */
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,14 +12,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ssr';
-
-  constructor(private toastr: ToastrService)
-  {
-
-  }
-
-  showSuccess() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
-  }
+  /**
+   * Application title
+   */
+  readonly title = 'ssr';
 }

@@ -1,18 +1,28 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { NgClass } from '@angular/common';
 
+/**
+ * Public header component - Header for public pages
+ */
 @Component({
   selector: 'app-public-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './public-header.component.html',
   styleUrl: './public-header.component.scss'
 })
 export class PublicHeaderComponent {
-  dropdownOpen: string | null = null;
+  /**
+   * Signal containing the currently open dropdown menu identifier
+   */
+  readonly dropdownOpen = signal<string | null>(null);
 
+  /**
+   * Toggles the dropdown menu state
+   * @param menu - The identifier of the menu to toggle
+   */
   toggleDropdown(menu: string): void {
-    this.dropdownOpen = this.dropdownOpen === menu ? null : menu;
-    console.log("select", this.dropdownOpen)
+    const currentOpen = this.dropdownOpen();
+    this.dropdownOpen.set(currentOpen === menu ? null : menu);
   }
 }
