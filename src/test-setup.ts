@@ -1,4 +1,5 @@
 import 'zone.js';
+import 'zone.js/testing';
 import { getTestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
@@ -8,5 +9,5 @@ import {
 // Initialize Angular testing environment
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting(),
+  platformBrowserDynamicTesting()
 );

@@ -135,15 +135,14 @@
   <!-- Markdown Section -->
   <section id="markdownSection" class="p-5 bg-light">
     <div class="markdown-container">
-      <md-editor 
-        name="Content" 
+      <h3 class="mb-3">Markdown Editor</h3>
+      <p class="text-muted">Markdown editor temporarily disabled - needs Angular 21 compatibility update for ngx-markdown-editor</p>
+      <textarea 
+        class="form-control" 
+        rows="10"
         [ngModel]="markdownContent()" 
         (ngModelChange)="markdownContent.set($event)"
-        [height]="'800px'" 
-        [mode]="''" 
-        [options]="toolbarOptions">
-        <slot custom-btns></slot>
-      </md-editor>
+        placeholder="Enter markdown content here..."></textarea>
     </div>
   </section>
   <!-- Markdown Section -->

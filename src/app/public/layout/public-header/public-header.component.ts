@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { NgClass } from '@angular/common';
 
 /**
  * Public header component - Header for public pages
@@ -7,7 +6,7 @@ import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-public-header',
   standalone: true,
-  imports: [NgClass],
+  imports: [],
   templateUrl: './public-header.component.html',
   styleUrl: './public-header.component.scss'
 })

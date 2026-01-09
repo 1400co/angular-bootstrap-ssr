@@ -12,10 +12,10 @@ import { NgClass } from '@angular/common';
   selector: 'app-private-layout',
   standalone: true,
   imports: [
-    RouterOutlet, 
-    PrivateHeaderComponent, 
-    PrivateFooterComponent, 
-    NgClass
+    RouterOutlet,
+    NgClass,
+    PrivateHeaderComponent,
+    PrivateFooterComponent
   ],
   templateUrl: './private-layout.component.html',
   styleUrl: './private-layout.component.scss'

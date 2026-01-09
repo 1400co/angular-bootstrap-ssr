@@ -1,6 +1,7 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { LMarkdownEditorModule } from 'ngx-markdown-editor';
+// Temporary: Commenting out markdown editor due to Angular 21 compatibility issues
+// import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { PixelService } from 'ngx-multi-pixel';
 import { ToastrService } from 'ngx-toastr';
 
@@ -10,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [LMarkdownEditorModule, FormsModule],
+  imports: [FormsModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
